@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    </head>
+
+    <body>
+
+        <header>
+        </header>
+
+        <main>
+            <section>
+                <form class="">
+                   <!-- <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name"> -->
+                    <div class="inputs">
+                    <div class="forminput">
+                        URL: <input type="text" id="input" name="fullname" placeholder="Place a valid URL here" >
+                    </div>
+                    </div>
+                    <input type="submit" name="" value="submit" id="submit" onclick="return Client.handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div class="results">
+                    <div class="content">
+                        <div id=>Subjectivity:   </div>
+                        <div id="subjectivity"> </div>
+                    </div>
+                    <div class="content">
+                        <div id=>Polarity:   </div>
+                        <div id="polarity"> </div>
+                    </div>
+                    <div class="content">
+                        <div id=>Confidence:   </div>
+                        <div id="confidence"> </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>This is a footer</p>
+        </footer>
+<script>
+    //load serviceworker 
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+</script>
+    </body>
+</html>
